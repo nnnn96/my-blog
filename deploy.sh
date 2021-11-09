@@ -10,7 +10,11 @@ npm run build
 cd docs/.vuepress/dist
 
 # deploy to github pages
+<<<<<<< HEAD
 #echo 'b.xugaoyi.com' > CNAME
+=======
+# echo 'b.xugaoyi.com' > CNAME
+>>>>>>> 524c68db1c1f45d7eeaa3f3620bca0db2271ffc8
 
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
@@ -26,6 +30,7 @@ git add -A
 git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
 
+<<<<<<< HEAD
 # deploy to gitee pages
 # echo 'www.xugaoyi.com\nxugaoyi.com' > CNAME  # 自定义域名
 # echo 'google.com, pub-7828333725993554, DIRECT, f08c47fec0942fa0' > ads.txt # 谷歌广告相关文件
@@ -39,6 +44,20 @@ git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
  git add -A
  git commit -m "${msg}"
  git push -f $codingUrl master # 推送到coding
+=======
+# deploy to coding pages
+# echo 'www.xugaoyi.com\nxugaoyi.com' > CNAME  # 自定义域名
+# echo 'google.com, pub-7828333725993554, DIRECT, f08c47fec0942fa0' > ads.txt # 谷歌广告相关文件
+
+# if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
+#   codingUrl=git@e.coding.net:xgy/xgy.git
+# else
+#   codingUrl=https://HmuzsGrGQX:${CODING_TOKEN}@e.coding.net/xgy/xgy.git
+# fi
+# git add -A
+# git commit -m "${msg}"
+# git push -f $codingUrl master # 推送到coding
+>>>>>>> 524c68db1c1f45d7eeaa3f3620bca0db2271ffc8
 
 cd -
 rm -rf docs/.vuepress/dist
