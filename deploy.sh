@@ -17,7 +17,7 @@ if [ -z "$GITHUB_TOKEN" ]; then
   githubUrl=git@github.com:nnnn96/my-blog.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://nnnn96:${GITHUB_TOKEN}@github.com:nnnn96/my-blog.git
+  githubUrl=https://nnnn96:${GITHUB_TOKEN}@github.com/nnnn96/my-blog.git
   git config --global user.name "nnnn96"
   git config --global user.email "2422631371@qq.com"
 fi
@@ -34,7 +34,7 @@ git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
  if [ -z "$GITEE_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
    codingUrl=git@gitee.com:nn0824/my-blog.git
  else
-   codingUrl=https://nn0824:${GITEE_TOKEN}@gitee.com:nn0824/my-blog.git
+   codingUrl=https://nn0824:${GITEE_TOKEN}@gitee.com/nn0824/my-blog.git
    
  fi
  git add -A
