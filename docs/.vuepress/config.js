@@ -15,9 +15,5 @@ module.exports = {
 
   head,
   plugins,
-<<<<<<< HEAD
   themeConfig,
-=======
-   themeConfig,
->>>>>>> 524c68db1c1f45d7eeaa3f3620bca0db2271ffc8
 }
